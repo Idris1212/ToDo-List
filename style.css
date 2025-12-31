@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e90ff, #6cbcff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 420px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+h1 {
+  color: #1e90ff;
+}
+
+.todo-input {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: #1e90ff;
+}
+
+button:hover {
+  background: #187bcd;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#deleteAll {
+  background: red;
+}
+
+#deleteAll:hover {
+  background: darkred;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: #f4f6f8;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  animation: fadeIn 0.3s ease;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete {
+  background: red;
+  border-radius: 6px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+#counter {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#emptyState {
+  color: gray;
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
